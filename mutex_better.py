@@ -100,7 +100,7 @@ if __name__ == "__main__":
                 self.lock()
                 control = self.add()
                 self.release()
-            print("[*] Done")
+
             
             control = True
             
@@ -110,7 +110,7 @@ if __name__ == "__main__":
                 self.lock()
                 control = self.sub()
                 self.release()
-            print("[*] Done")
+
 
             control = True
             
@@ -121,7 +121,7 @@ if __name__ == "__main__":
                 control = self.sub_from_7()
                 self.release()
              
-            print("[*] Done")
+            
             
     
     w1 = Worker1(mutex)
