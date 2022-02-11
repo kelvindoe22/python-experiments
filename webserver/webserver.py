@@ -22,7 +22,7 @@ Connection: Closed
 
 <html>
 <body>
-<h1>Exiting</h1>
+<h1>Exiting...</h1>
 </body>
 </html>
 """,
@@ -39,7 +39,7 @@ while True:
     req = conn.recv(1000).decode()
     a = req.split("\n")[0].split(' ')[1]
     if a == "/quit":
-
+        conn.send(exiting())
         conn.close()
         break
     else:
